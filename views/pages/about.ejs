@@ -1,0 +1,25 @@
+
+<%- contentFor('HomePage') %>
+<section class="home">
+  <div class="jumbotron text-center">
+    Welcome To About page <br /> <br /><br />
+    <a href="/"><button class="btn btn-success">Get started</button></a>
+    <a href="/contact"><button class="btn btn-primary">Contact Us</button></a>
+  </div>
+  </section>
+  <%- contentFor('Body') %>
+  <div class="jumbotron">
+  		<h6>Our Users</h6>
+  		<% for (user of users) {%>
+  		<div class="row">
+  			<div class="col-md-6">
+  				NAME:<h6><%= user.name %></h6>
+  			</div>
+  			<div class="col-md-6">
+  				EMAIL:<h6><%= user.email %></h6>
+  			</div>
+  		</div>
+  		<% } %>
+  </div> 
+  
+
