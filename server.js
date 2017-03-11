@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require("express");
 
 var expressLayouts = require("express-ejs-layouts");
@@ -12,7 +14,7 @@ app.set('view engine', 'ejs');
 
 app.use(expressLayouts);
 
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended : true}));
 
 var router = require("./app/routes");
 
